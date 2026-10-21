@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WanderLeaf | Explore the World</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#home" class="logo">🌿 WanderLeaf</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+        <nav id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#destinations">Destinations</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="eyebrow">DISCOVER • EXPLORE • EXPERIENCE</p>
+
+            <h1>Find Your Next<br>Beautiful Escape</h1>
+
+            <p>
+                Discover breathtaking destinations, explore hidden gems,
+                and create memories that last a lifetime.
+            </p>
+
+            <a href="#destinations" class="btn">Explore Destinations ↗</a>
+        </div>
+
+        <div class="hero-note">
+            <span>🌱</span>
+            Travel naturally. Live beautifully.
+        </div>
+    </section>
+    <section class="about section" id="about">
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=85"
+                alt="Beautiful nature and wildlife"
+                loading="lazy"
+            >
+        </div>
+
+        <div class="about-content">
+            <p class="eyebrow">ABOUT WANDERLEAF</p>
+
+            <h2>Your Journey.<br>Our Inspiration.</h2>
+
+            <p>
+                WanderLeaf is your guide to discovering the beauty of our
+                planet. From peaceful mountains and tropical beaches to
+                historic cities and lush green forests, we help you find
+                places worth exploring.
+            </p>
+
+            <p>
+                Our goal is to make travel inspiration simple, accessible,
+                and exciting for every kind of traveller.
+            </p>
+
+            <div class="about-stats">
+                <div>
+                    <h3>10+</h3>
+                    <p>Destinations</p>
+                </div>
+                <div>
+                    <h3>1</h3>
+                    <p>Beautiful world</p>
+                </div>
+                <div>
+                    <h3>∞</h3>
+                    <p>Memories to make</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="destinations section" id="destinations">
+        <div class="section-heading">
+            <p class="eyebrow">YOUR NEXT ADVENTURE</p>
+            <h2>Explore Beautiful Places</h2>
+            <p>Click any destination to discover more about it.</p>
+        </div>
+
+        <div class="destination-grid" id="destinationGrid">
+
+        </div>
+    </section>
+
+  
+    <section class="contact section" id="contact">
+        <div class="contact-info">
+            <p class="eyebrow">LET'S PLAN SOMETHING BEAUTIFUL</p>
+            <h2>Have a trip in mind?</h2>
+
+            <p>
+                Tell us where you would love to go. Send us your questions
+                or travel enquiry using the form.
+            </p>
+
+            <div class="contact-detail">🌿 Nature-inspired travel</div>
+            <div class="contact-detail">✉️ Email us your enquiry</div>
+            <div class="contact-detail">✈️ Start planning your next trip</div>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+            <h3>Get in Touch</h3>
+
+            <label for="name">Your Name</label>
+            <input
+                type="text"
+                id="name"
+                name="from_name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="from_email"
+                placeholder="Enter your email"
+                required
+            >
+
+            <label for="destination">Interested Destination</label>
+            <select id="destination" name="destination" required>
+                <option value="">Choose a destination</option>
+                <option>Bali, Indonesia</option>
+                <option>Swiss Alps, Switzerland</option>
+                <option>Kyoto, Japan</option>
+                <option>Maldives</option>
+                <option>Manali, India</option>
+                <option>Kerala, India</option>
+                <option>Paris, France</option>
+                <option>Dubai, UAE</option>
+                <option>Banff, Canada</option>
+                <option>Cape Town, South Africa</option>
+                <option>General enquiry</option>
+            </select>
+
+            <label for="message">Your Message</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Tell us about your travel plans..."
+                required
+            ></textarea>
+
+            <button type="submit" class="btn submit-btn" id="submitBtn">
+                Send Message ↗
+            </button>
+
+            <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#home" class="logo">🌿 WanderLeaf</a>
+        <p>Explore more. Travel mindfully. Love the planet.</p>
+        <p>© 2026 WanderLeaf. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
