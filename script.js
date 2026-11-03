@@ -242,9 +242,9 @@ contactForm.addEventListener("submit", async event => {
     event.preventDefault();
 
     if (
-        PUBLIC_KEY === "YOUR_PUBLIC_KEY" ||
-        SERVICE_ID === "YOUR_SERVICE_ID" ||
-        TEMPLATE_ID === "YOUR_TEMPLATE_ID"
+        PUBLIC_KEY === "j6Gzf1bBl0G-XRLQu" ||
+        SERVICE_ID === "service_4fr81dp" ||
+        TEMPLATE_ID === "template_50ys11e"
     ) {
         formStatus.textContent =
             "Please configure your EmailJS keys in script.js before sending.";
