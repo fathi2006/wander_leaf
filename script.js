@@ -234,48 +234,51 @@ const formStatus = document.getElementById("formStatus");
 const submitBtn = document.getElementById("submitBtn");
 
 
+// EmailJS Configuration
 const PUBLIC_KEY = "j6Gzf1bBl0G-XRLQu";
 const SERVICE_ID = "service_1do00pg";
 const TEMPLATE_ID = "template_50ys11e";
 
-contactForm.addEventListener("submit", async event => {
-    event.preventDefault();
+// Initialize EmailJS
+emailjs.init({
+    publicKey: PUBLIC_KEY
+});
 
-    if (
-        const PUBLIC_KEY = "j6Gzf1bBl0G-XRLQu";
-        const SERVICE_ID = "service_1do00pg";
-        const TEMPLATE_ID = "template_50ys11e";
-    ) {
-        formStatus.textContent =
-            "Please configure your EmailJS keys in script.js before sending.";
-        return;
-    }
+contactForm.addEventListener("submit", async (event) => {
+
+    event.preventDefault();
 
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending...";
     formStatus.textContent = "";
 
     try {
+
         await emailjs.sendForm(
             SERVICE_ID,
             TEMPLATE_ID,
-            contactForm,
-            { publicKey: PUBLIC_KEY }
+            contactForm
         );
 
         formStatus.textContent =
             "Message sent successfully! Thank you for contacting us.";
 
         contactForm.reset();
+
     } catch (error) {
-        console.error("EmailJS error:", error);
+
+        console.error("EmailJS Error:", error);
 
         formStatus.textContent =
-            "Unable to send your message. Please check your EmailJS settings and try again.";
+            "Unable to send your message. Please try again.";
+
     } finally {
+
         submitBtn.disabled = false;
         submitBtn.textContent = "Send Message ↗";
+
     }
+
 });
 
 
