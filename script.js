@@ -234,9 +234,9 @@ const formStatus = document.getElementById("formStatus");
 const submitBtn = document.getElementById("submitBtn");
 
 
-const PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-const SERVICE_ID = "YOUR_SERVICE_ID";
-const TEMPLATE_ID = "YOUR_TEMPLATE_ID";
+const PUBLIC_KEY = "j6Gzf1bBl0G-XRLQu";
+const SERVICE_ID = "service_1do00pg";
+const TEMPLATE_ID = "template_50ys11e";
 
 contactForm.addEventListener("submit", async event => {
     event.preventDefault();
